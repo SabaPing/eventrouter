@@ -1,3 +1,12 @@
+```shell
+docker pull sabaping/eventrouter:latest
+
+# To build and push image to sabaping/eventrouter repo
+make image
+```
+
+---
+
 # Eventrouter
 
 This repository contains a simple event router for the [Kubernetes][kubernetes] project. The event router serves as an active watcher of _event_ resource in the kubernetes system, which takes those events and _pushes_ them to a user specified _sink_.  This is useful for a number of different purposes, but most notably long term behavioral analysis of your 
