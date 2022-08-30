@@ -14,6 +14,7 @@
 
 TARGET = eventrouter
 GOTARGET = github.com/openshift/$(TARGET)
+VERSION = v0.1.0
 
 ifneq ($(VERBOSE),)
 VERBOSE_FLAG = -v
@@ -30,7 +31,7 @@ fmt:
 	@echo gofmt
 
 image:
-	docker buildx build --push --platform linux/arm64/v8,linux/amd64 --tag sabaping/eventrouter:latest .
+	docker buildx build --push --platform linux/arm64/v8,linux/amd64 --tag sabaping/eventrouter:$(VERSION) .
 .PHONY: image
 
 test:
